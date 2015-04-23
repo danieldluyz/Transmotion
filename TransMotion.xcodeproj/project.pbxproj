@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8E1AE1FA1AD9E6C90034758C /* gpx.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 8E1AE1F91AD9E6C90034758C /* gpx.gpx */; };
+		8E1AE1FC1AD9E8CF0034758C /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E1AE1FB1AD9E8CE0034758C /* MenuController.swift */; };
+		8E6121E11ADB6C1500F61448 /* RoutesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6121E01ADB6C1500F61448 /* RoutesController.swift */; };
+		8E6B74A11AD9B84A00D92D06 /* LocalizationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6B74A01AD9B84A00D92D06 /* LocalizationController.swift */; };
+		8E6B74A31AD9BDEB00D92D06 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E6B74A21AD9BDEB00D92D06 /* CoreLocation.framework */; settings = {ATTRIBUTES = (Required, ); }; };
+		8E6B74A51AD9CABA00D92D06 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E6B74A41AD9CABA00D92D06 /* MapKit.framework */; };
+		8EC982C01ADC309600A5341C /* RouteController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC982BF1ADC309600A5341C /* RouteController.swift */; };
 		E54158B51ABF8F15001746FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54158B41ABF8F15001746FF /* AppDelegate.swift */; };
 		E54158B71ABF8F15001746FF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54158B61ABF8F15001746FF /* ViewController.swift */; };
 		E54158BA1ABF8F15001746FF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E54158B81ABF8F15001746FF /* Main.storyboard */; };
@@ -26,6 +33,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8E1AE1F91AD9E6C90034758C /* gpx.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = gpx.gpx; path = ../gpx.gpx; sourceTree = "<group>"; };
+		8E1AE1FB1AD9E8CE0034758C /* MenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuController.swift; sourceTree = "<group>"; };
+		8E6121E01ADB6C1500F61448 /* RoutesController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoutesController.swift; sourceTree = "<group>"; };
+		8E6B74A01AD9B84A00D92D06 /* LocalizationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalizationController.swift; sourceTree = "<group>"; };
+		8E6B74A21AD9BDEB00D92D06 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		8E6B74A41AD9CABA00D92D06 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		8EC982BF1ADC309600A5341C /* RouteController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteController.swift; sourceTree = "<group>"; };
 		E54158AF1ABF8F15001746FF /* TransMotion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TransMotion.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E54158B31ABF8F15001746FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E54158B41ABF8F15001746FF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -43,6 +57,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E6B74A51AD9CABA00D92D06 /* MapKit.framework in Frameworks */,
+				8E6B74A31AD9BDEB00D92D06 /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +75,9 @@
 		E54158A61ABF8F15001746FF = {
 			isa = PBXGroup;
 			children = (
+				8E1AE1F91AD9E6C90034758C /* gpx.gpx */,
+				8E6B74A41AD9CABA00D92D06 /* MapKit.framework */,
+				8E6B74A21AD9BDEB00D92D06 /* CoreLocation.framework */,
 				E54158B11ABF8F15001746FF /* TransMotion */,
 				E54158C71ABF8F16001746FF /* TransMotionTests */,
 				E54158B01ABF8F15001746FF /* Products */,
@@ -78,6 +97,10 @@
 			isa = PBXGroup;
 			children = (
 				E54158B41ABF8F15001746FF /* AppDelegate.swift */,
+				8E6B74A01AD9B84A00D92D06 /* LocalizationController.swift */,
+				8E1AE1FB1AD9E8CE0034758C /* MenuController.swift */,
+				8EC982BF1ADC309600A5341C /* RouteController.swift */,
+				8E6121E01ADB6C1500F61448 /* RoutesController.swift */,
 				E54158B61ABF8F15001746FF /* ViewController.swift */,
 				E54158B81ABF8F15001746FF /* Main.storyboard */,
 				E54158BB1ABF8F15001746FF /* Images.xcassets */,
@@ -161,6 +184,11 @@
 				TargetAttributes = {
 					E54158AE1ABF8F15001746FF = {
 						CreatedOnToolsVersion = 6.2;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					E54158C31ABF8F16001746FF = {
 						CreatedOnToolsVersion = 6.2;
@@ -195,6 +223,7 @@
 				E54158BA1ABF8F15001746FF /* Main.storyboard in Resources */,
 				E54158BF1ABF8F15001746FF /* LaunchScreen.xib in Resources */,
 				E54158BC1ABF8F15001746FF /* Images.xcassets in Resources */,
+				8E1AE1FA1AD9E6C90034758C /* gpx.gpx in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -212,7 +241,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E1AE1FC1AD9E8CF0034758C /* MenuController.swift in Sources */,
+				8EC982C01ADC309600A5341C /* RouteController.swift in Sources */,
 				E54158B71ABF8F15001746FF /* ViewController.swift in Sources */,
+				8E6B74A11AD9B84A00D92D06 /* LocalizationController.swift in Sources */,
+				8E6121E11ADB6C1500F61448 /* RoutesController.swift in Sources */,
 				E54158B51ABF8F15001746FF /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -405,6 +438,7 @@
 				E54158D01ABF8F16001746FF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E54158D11ABF8F16001746FF /* Build configuration list for PBXNativeTarget "TransMotionTests" */ = {
 			isa = XCConfigurationList;
@@ -413,6 +447,7 @@
 				E54158D31ABF8F16001746FF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
