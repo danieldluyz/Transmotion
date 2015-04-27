@@ -34,8 +34,8 @@ class RoutesController: UIViewController {
             labelOrigen.text = "Estación de origen: \(origen!)"
             labelDestino.text = "Estación de destino: \(destino!)"
             
-            botonRutaTiempo.setTitle("Ver ruta más rápida ( \(tiempoMinimo!) minutos )", forState: UIControlState.Normal)
-            botonRutaCongestion.setTitle("Ver ruta con la menor congestión ( \(congestionMinima!)ss )", forState: UIControlState.Normal)
+            botonRutaTiempo.setTitle("Ruta tiempo ( \(tiempoMinimo!) minutos )", forState: UIControlState.Normal)
+            botonRutaCongestion.setTitle("Ruta congestión ( \(congestionMinima!) )", forState: UIControlState.Normal)
         }
     }
 

@@ -13,6 +13,8 @@
 		8E6B74A11AD9B84A00D92D06 /* LocalizationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6B74A01AD9B84A00D92D06 /* LocalizationController.swift */; };
 		8E6B74A31AD9BDEB00D92D06 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E6B74A21AD9BDEB00D92D06 /* CoreLocation.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		8E6B74A51AD9CABA00D92D06 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E6B74A41AD9CABA00D92D06 /* MapKit.framework */; };
+		8E7D65561AED58B200AD3735 /* WelcomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E7D65551AED58B200AD3735 /* WelcomeController.swift */; };
+		8E7D65581AED5BAE00AD3735 /* CongestionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E7D65571AED5BAE00AD3735 /* CongestionController.swift */; };
 		8EC982C01ADC309600A5341C /* RouteController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC982BF1ADC309600A5341C /* RouteController.swift */; };
 		E54158B51ABF8F15001746FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54158B41ABF8F15001746FF /* AppDelegate.swift */; };
 		E54158B71ABF8F15001746FF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54158B61ABF8F15001746FF /* ViewController.swift */; };
@@ -39,6 +41,8 @@
 		8E6B74A01AD9B84A00D92D06 /* LocalizationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalizationController.swift; sourceTree = "<group>"; };
 		8E6B74A21AD9BDEB00D92D06 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		8E6B74A41AD9CABA00D92D06 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		8E7D65551AED58B200AD3735 /* WelcomeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeController.swift; sourceTree = "<group>"; };
+		8E7D65571AED5BAE00AD3735 /* CongestionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CongestionController.swift; sourceTree = "<group>"; };
 		8EC982BF1ADC309600A5341C /* RouteController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteController.swift; sourceTree = "<group>"; };
 		E54158AF1ABF8F15001746FF /* TransMotion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TransMotion.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E54158B31ABF8F15001746FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -97,11 +101,13 @@
 			isa = PBXGroup;
 			children = (
 				E54158B41ABF8F15001746FF /* AppDelegate.swift */,
+				8E7D65571AED5BAE00AD3735 /* CongestionController.swift */,
 				8E6B74A01AD9B84A00D92D06 /* LocalizationController.swift */,
 				8E1AE1FB1AD9E8CE0034758C /* MenuController.swift */,
 				8EC982BF1ADC309600A5341C /* RouteController.swift */,
 				8E6121E01ADB6C1500F61448 /* RoutesController.swift */,
 				E54158B61ABF8F15001746FF /* ViewController.swift */,
+				8E7D65551AED58B200AD3735 /* WelcomeController.swift */,
 				E54158B81ABF8F15001746FF /* Main.storyboard */,
 				E54158BB1ABF8F15001746FF /* Images.xcassets */,
 				E54158BD1ABF8F15001746FF /* LaunchScreen.xib */,
@@ -242,6 +248,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				8E1AE1FC1AD9E8CF0034758C /* MenuController.swift in Sources */,
+				8E7D65561AED58B200AD3735 /* WelcomeController.swift in Sources */,
+				8E7D65581AED5BAE00AD3735 /* CongestionController.swift in Sources */,
 				8EC982C01ADC309600A5341C /* RouteController.swift in Sources */,
 				E54158B71ABF8F15001746FF /* ViewController.swift in Sources */,
 				8E6B74A11AD9B84A00D92D06 /* LocalizationController.swift in Sources */,

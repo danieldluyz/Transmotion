@@ -66,20 +66,13 @@ class LocalizationController: UIViewController, CLLocationManagerDelegate  {
     }
     
     @IBAction func irAMenu(sender: AnyObject) {
-        performSegueWithIdentifier("Menu", sender: sender)
+        performSegueWithIdentifier("welcomeSegue", sender: sender)
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
-        if segue.identifier == "Menu"{
-            
-            let menuController = segue.destinationViewController as! MenuController
-            
-            //if longitud != nil && self.latitud != nil
-            //{
-            //    menuController.latitud = latitud
-            //    menuController.longitud = longitud
-            //}
+        if segue.identifier == "welcomeSegue"{
+            let welcomeController = segue.destinationViewController as! WelcomeController
         }
         
     }
