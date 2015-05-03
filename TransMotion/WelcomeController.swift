@@ -11,7 +11,8 @@ import UIKit
 
 class WelcomeController: UIViewController {
     
-    
+    var latitude: Double?
+    var longitude: Double?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,6 +34,8 @@ class WelcomeController: UIViewController {
         
         if segue.identifier == "buscarRuta"{
             let menuController = segue.destinationViewController as! MenuController
+            menuController.latitude = self.latitude!
+            menuController.longitude = self.longitude!
         }
         else if segue.identifier == "congestionEstacion" {
             let congestionController = segue.destinationViewController as! CongestionController

@@ -15,6 +15,8 @@ class RoutesController: UIViewController {
     var congestionMinima: String?
     var origen: String?
     var destino: String?
+    var latitude: Double?
+    var longitude: Double?
     
     var titulo: String = "Tiempo"
     
@@ -26,16 +28,22 @@ class RoutesController: UIViewController {
     @IBOutlet weak var botonRutaTiempo: UIButton!
     @IBOutlet weak var botonRutaCongestion: UIButton!
     
+    @IBOutlet weak var imageHolderTiempo: UIImageView!
+    @IBOutlet weak var imageHolderCongestion: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         if origen != nil && destino != nil && tiempoMinimo != nil && congestionMinima != nil
         {
-            labelOrigen.text = "Estación de origen: \(origen!)"
-            labelDestino.text = "Estación de destino: \(destino!)"
+            labelOrigen.text = "Dede: \(origen!)"
+            labelDestino.text = "Hasta: \(destino!)"
             
-            botonRutaTiempo.setTitle("Ruta tiempo ( \(tiempoMinimo!) minutos )", forState: UIControlState.Normal)
-            botonRutaCongestion.setTitle("Ruta congestión ( \(congestionMinima!) )", forState: UIControlState.Normal)
+            botonRutaTiempo.setTitle("Tiempo - \(tiempoMinimo!) minutos", forState: UIControlState.Normal)
+            botonRutaCongestion.setTitle("Congestión - \(congestionMinima!)%", forState: UIControlState.Normal)
+            
+            imageHolderTiempo.image = UIImage(named: "green-circle-md")
+            imageHolderCongestion.image = UIImage(named: "yellow-circle")
         }
     }
 

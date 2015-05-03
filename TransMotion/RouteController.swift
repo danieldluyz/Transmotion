@@ -54,20 +54,32 @@ class RouteController: UIViewController {
             
             if ruta.count > 0 {
                 
-                for var i = 0; i < ruta.count; i++ {
+                var recorrido: String = ruta[0]
+                var linea = recorrido.componentsSeparatedByString("-")
+                labelRecorrido1.text = "Diríjase a " + linea[0] + " y tome la ruta " + linea[1]
+                labelRecorrido1.hidden = false
+                
+                var contador = 0;
+                
+                for var i = 1; i < ruta.count-1; i++ {
                     
                     println(ruta[i])
                     
                     var recorrido: String = ruta[i]
                     var linea = recorrido.componentsSeparatedByString("-")
-                    var texto = "Tome la ruta " + linea[1] + " hasta " + linea[0]
+                    var texto = "Descienda en " + linea[0] + " y tome la ruta " + linea[1]
                     
                     var label = labels[i]
                     label.hidden = false
                     label.text = texto
-                    
+                    contador = i
                 }
 
+                contador = contador + 1;
+                recorrido = ruta[contador]
+                linea = recorrido.componentsSeparatedByString("-")
+                labels[contador].hidden = false
+                labels[contador].text = "Descienda en " + linea[0]
             }
             
         }

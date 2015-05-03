@@ -15,8 +15,8 @@ class LocalizationController: UIViewController, CLLocationManagerDelegate  {
     
     var manager: CLLocationManager?
     
-    var latitud: Double?
-    var longitud: Double?
+    var latitude: Double?
+    var longitude: Double?
     
     @IBOutlet weak var mapView: MKMapView!
 
@@ -41,7 +41,6 @@ class LocalizationController: UIViewController, CLLocationManagerDelegate  {
         
     }
     
-    
     func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!) {
         manager.stopUpdatingLocation()
         let location = locations[0] as! CLLocation
@@ -52,11 +51,15 @@ class LocalizationController: UIViewController, CLLocationManagerDelegate  {
             
             self.mapView.centerCoordinate = location.coordinate
             self.mapView.showsUserLocation = true
+            let regionRadius: CLLocationDistance = 1000
+            let coordinateRegion = MKCoordinateRegionMakeWithDistance(location.coordinate,
+                regionRadius * 2.0, regionRadius * 2.0)
+            self.mapView.setRegion(coordinateRegion, animated: true)
             
-            //let latitude: String = location.coordinate.latitude.description
+            self.latitude = Double(location.coordinate.latitude)
             //self.latitud = NSString(string: latitude).doubleValue
             
-            //let longitude: String = location.coordinate.longitude.description
+            self.longitude = Double(location.coordinate.longitude)
             //self.longitud = NSString(string: longitude).doubleValue
         })
     }
@@ -73,6 +76,8 @@ class LocalizationController: UIViewController, CLLocationManagerDelegate  {
         
         if segue.identifier == "welcomeSegue"{
             let welcomeController = segue.destinationViewController as! WelcomeController
+            welcomeController.latitude = self.latitude!
+            welcomeController.longitude = self.longitude!
         }
         
     }

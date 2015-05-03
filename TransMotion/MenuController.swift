@@ -19,6 +19,8 @@ class MenuController: UIViewController, UITextFieldDelegate, UIPickerViewDataSou
     @IBOutlet weak var pickerDestination: UIPickerView! = UIPickerView()
     @IBOutlet weak var button: UIButton!
     
+    var latitude: Double?
+    var longitude: Double?
     
     let estaciones = ["Seleccionar",
         "Universidades",
@@ -109,7 +111,7 @@ class MenuController: UIViewController, UITextFieldDelegate, UIPickerViewDataSou
             
             let routesController = segue.destinationViewController as! RoutesController
             
-            let dictionary = NSDictionary(objects: [labelOrigen.text, labelDestino.text, "0.0", "0.0"], forKeys: ["nombreEstacionOrigen", "nombreEstacionDestino", "latitud", "longitud"])
+            let dictionary = NSDictionary(objects: [labelOrigen.text, labelDestino.text, latitude!, longitude!], forKeys: ["nombreEstacionOrigen", "nombreEstacionDestino", "latitud", "longitud"])
             
             println(dictionary)
             
