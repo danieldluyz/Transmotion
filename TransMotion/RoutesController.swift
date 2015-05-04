@@ -39,11 +39,26 @@ class RoutesController: UIViewController {
             labelOrigen.text = "Dede: \(origen!)"
             labelDestino.text = "Hasta: \(destino!)"
             
-            botonRutaTiempo.setTitle("Tiempo - \(tiempoMinimo!) minutos", forState: UIControlState.Normal)
-            botonRutaCongestion.setTitle("Congestión - \(congestionMinima!)%", forState: UIControlState.Normal)
+            var con = NSString(string: congestionMinima!).doubleValue
+            con = con/2
             
-            imageHolderTiempo.image = UIImage(named: "green-circle-md")
-            imageHolderCongestion.image = UIImage(named: "yellow-circle")
+            botonRutaTiempo.setTitle("Tiempo - \(tiempoMinimo!) minutos", forState: UIControlState.Normal)
+            botonRutaCongestion.setTitle("Congestión - \(con)%", forState: UIControlState.Normal)
+            
+            if con < 50 {
+               imageHolderTiempo.image = UIImage(named: "green")
+               imageHolderCongestion.image = UIImage(named: "green")
+            }
+            else if con < 75 {
+                imageHolderTiempo.image = UIImage(named: "red")
+                imageHolderCongestion.image = UIImage(named: "yellow")
+            }
+            else {
+                imageHolderTiempo.image = UIImage(named: "red")
+                imageHolderCongestion.image = UIImage(named: "red")
+            }
+            
+            
         }
     }
 

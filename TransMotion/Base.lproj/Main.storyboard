@@ -32,9 +32,9 @@
                                 </constraints>
                             </mapView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N73-8l-LAO">
-                                <rect key="frame" x="86" y="492" width="148" height="30"/>
+                                <rect key="frame" x="93" y="492" width="134" height="30"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
-                                <state key="normal" title="Obtener localización">
+                                <state key="normal" title="Enviar localización">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -487,6 +487,21 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VX6-pK-4D2">
+                                <rect key="frame" x="108" y="494" width="176" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="176" id="BVC-Ew-kQv"/>
+                                    <constraint firstAttribute="height" constant="30" id="OF3-WS-Iu8"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
+                                <state key="normal" title="Congestión - (50%)">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="buscarRutaCongestion:" destination="vJT-Pk-0w2" eventType="touchUpInside" id="gLq-Bn-YaX"/>
+                                </connections>
+                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Destino: Estación 2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JPd-bU-8cf">
                                 <rect key="frame" x="27" y="245" width="277" height="42"/>
                                 <constraints>
@@ -523,50 +538,47 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BS3-0E-C6R">
-                                <rect key="frame" x="27" y="441" width="46" height="38"/>
+                                <rect key="frame" x="50" y="441" width="46" height="38"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="46" id="DzU-yH-UBm"/>
                                     <constraint firstAttribute="height" constant="38" id="cqf-A6-IQ6"/>
                                 </constraints>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="v1G-ky-D59">
-                                <rect key="frame" x="27" y="494" width="46" height="38"/>
+                                <rect key="frame" x="50" y="494" width="46" height="38"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="46" id="1YI-We-MLH"/>
                                     <constraint firstAttribute="height" constant="38" id="dRW-bE-jta"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VX6-pK-4D2">
-                                <rect key="frame" x="108" y="494" width="176" height="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Congestión" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qeU-eZ-VmE">
+                                <rect key="frame" x="40" y="412" width="67" height="21"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="176" id="BVC-Ew-kQv"/>
-                                    <constraint firstAttribute="height" constant="30" id="OF3-WS-Iu8"/>
+                                    <constraint firstAttribute="width" constant="67" id="Lwh-0M-N13"/>
+                                    <constraint firstAttribute="height" constant="21" id="ili-ve-9Wd"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
-                                <state key="normal" title="Congestión - (50%)">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="buscarRutaCongestion:" destination="vJT-Pk-0w2" eventType="touchUpInside" id="gLq-Bn-YaX"/>
-                                </connections>
-                            </button>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.054901960780000002" green="0.090196078430000007" blue="0.3294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="VX6-pK-4D2" firstAttribute="leading" secondItem="cNw-UV-rqH" secondAttribute="leadingMargin" constant="92" id="0v7-tp-mH0"/>
-                            <constraint firstItem="VX6-pK-4D2" firstAttribute="leading" secondItem="v1G-ky-D59" secondAttribute="trailing" constant="35" id="4qD-5T-6dr"/>
-                            <constraint firstItem="BS3-0E-C6R" firstAttribute="leading" secondItem="cNw-UV-rqH" secondAttribute="leadingMargin" constant="11" id="6ul-rY-sLu"/>
+                            <constraint firstItem="VX6-pK-4D2" firstAttribute="leading" secondItem="v1G-ky-D59" secondAttribute="trailing" constant="12" id="4qD-5T-6dr"/>
+                            <constraint firstItem="BS3-0E-C6R" firstAttribute="leading" secondItem="cNw-UV-rqH" secondAttribute="leadingMargin" constant="34" id="6ul-rY-sLu"/>
                             <constraint firstItem="lvk-EI-leh" firstAttribute="leading" secondItem="cNw-UV-rqH" secondAttribute="leadingMargin" constant="21" id="MWg-UZ-81c"/>
                             <constraint firstItem="VX6-pK-4D2" firstAttribute="top" secondItem="akQ-0r-rWV" secondAttribute="bottom" constant="19" id="PlT-KC-Glj"/>
+                            <constraint firstItem="qeU-eZ-VmE" firstAttribute="leading" secondItem="cNw-UV-rqH" secondAttribute="leadingMargin" constant="24" id="Qic-se-44w"/>
                             <constraint firstItem="Q9V-QD-Abv" firstAttribute="leading" secondItem="cNw-UV-rqH" secondAttribute="leadingMargin" constant="11" id="UXe-II-GCV"/>
                             <constraint firstItem="akQ-0r-rWV" firstAttribute="leading" secondItem="cNw-UV-rqH" secondAttribute="leadingMargin" constant="92" id="VbA-iN-bhG"/>
+                            <constraint firstItem="qeU-eZ-VmE" firstAttribute="top" secondItem="lvk-EI-leh" secondAttribute="bottom" constant="9" id="Xgl-db-3vU"/>
                             <constraint firstItem="BS3-0E-C6R" firstAttribute="top" secondItem="lvk-EI-leh" secondAttribute="bottom" constant="38" id="ZJS-EI-SmS"/>
                             <constraint firstItem="lvk-EI-leh" firstAttribute="top" secondItem="JPd-bU-8cf" secondAttribute="bottom" constant="29" id="ZSC-UF-UKU"/>
                             <constraint firstItem="v1G-ky-D59" firstAttribute="top" secondItem="BS3-0E-C6R" secondAttribute="bottom" constant="15" id="aR8-Jm-kGN"/>
-                            <constraint firstItem="v1G-ky-D59" firstAttribute="leading" secondItem="cNw-UV-rqH" secondAttribute="leadingMargin" constant="11" id="bYu-e4-1tk"/>
+                            <constraint firstItem="v1G-ky-D59" firstAttribute="leading" secondItem="cNw-UV-rqH" secondAttribute="leadingMargin" constant="34" id="bYu-e4-1tk"/>
                             <constraint firstItem="JPd-bU-8cf" firstAttribute="leading" secondItem="cNw-UV-rqH" secondAttribute="leadingMargin" constant="11" id="cM6-MX-aXo"/>
-                            <constraint firstItem="akQ-0r-rWV" firstAttribute="leading" secondItem="BS3-0E-C6R" secondAttribute="trailing" constant="35" id="d77-VM-hyI"/>
+                            <constraint firstItem="akQ-0r-rWV" firstAttribute="leading" secondItem="BS3-0E-C6R" secondAttribute="trailing" constant="12" id="d77-VM-hyI"/>
                             <constraint firstItem="Q9V-QD-Abv" firstAttribute="top" secondItem="LcN-I6-IIC" secondAttribute="bottom" constant="32" id="hnJ-7q-LVj"/>
                             <constraint firstItem="JPd-bU-8cf" firstAttribute="top" secondItem="Q9V-QD-Abv" secondAttribute="bottom" constant="8" id="hwT-F6-QMf"/>
                             <constraint firstAttribute="trailing" secondItem="LcN-I6-IIC" secondAttribute="trailing" id="kF0-kQ-Qjm"/>
