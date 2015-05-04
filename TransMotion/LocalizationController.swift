@@ -15,8 +15,8 @@ class LocalizationController: UIViewController, CLLocationManagerDelegate  {
     
     var manager: CLLocationManager?
     
-    var latitude: Double?
-    var longitude: Double?
+    var latitude: Double = 0.0
+    var longitude: Double = 0.0
     
     @IBOutlet weak var mapView: MKMapView!
 
@@ -76,8 +76,8 @@ class LocalizationController: UIViewController, CLLocationManagerDelegate  {
         
         if segue.identifier == "welcomeSegue"{
             let welcomeController = segue.destinationViewController as! WelcomeController
-            welcomeController.latitude = self.latitude!
-            welcomeController.longitude = self.longitude!
+            welcomeController.latitude = self.latitude
+            welcomeController.longitude = self.longitude
         }
         
     }

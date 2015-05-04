@@ -19,6 +19,8 @@ class CongestionController: UIViewController, UITextFieldDelegate, UIPickerViewD
     
     @IBOutlet weak var pickerEstacion: UIPickerView!
     
+    @IBOutlet weak var imagenCongestion: UIImageView!
+    
     let estaciones = ["Seleccionar",
         "Universidades",
         "Calle26",
@@ -116,6 +118,7 @@ class CongestionController: UIViewController, UITextFieldDelegate, UIPickerViewD
     
     func textFieldShouldBeginEditing(textField: UITextField) -> Bool {
         pickerEstacion.hidden = false
+        imagenCongestion.hidden = true
         labelCongestion.text = ""
         return false
     }
@@ -147,7 +150,25 @@ class CongestionController: UIViewController, UITextFieldDelegate, UIPickerViewD
                 
                 let congestion: NSArray = NSJSONSerialization.JSONObjectWithData(data!, options: nil, error: nil) as! NSArray
                 
-                labelCongestion.text = "La congestión en la estación es de \(congestion[0])%"
+                var cong: Double = congestion[0] as! Double
+                //var con = NSString(string: cong).doubleValue
+                var con = cong/2
+                
+                labelCongestion.text = "La congestión en la estación es de \(con)%"
+                
+                if con < 50 {
+                    imagenCongestion.image = UIImage(named: "green")
+                    imagenCongestion.hidden = false
+                }
+                else if con < 75 {
+                    imagenCongestion.image = UIImage(named: "yellow")
+                    imagenCongestion.hidden = false
+                }
+                else {
+                    imagenCongestion.image = UIImage(named: "red")
+                    imagenCongestion.hidden = false
+                }
+                
             }
         }
     }
